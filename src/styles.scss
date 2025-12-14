@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Importación de fuentes elegantes */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap");
+
+:host {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+.serif-font {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Clases para animación de scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animación suave para el contador */
+.countdown-item {
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Fondo con textura sutil */
+.bg-texture {
+  background-color: #fcfbf9;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
